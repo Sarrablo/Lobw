@@ -15,7 +15,9 @@ class Lobw:
         if self.number == None:
             raise NameError('Number not set')
 
-        if handlers.pelayo(self.browser, self.number):
-            print("Pelayo atack {} at {}".format(self.number,
+        #if handlers.pelayo(self.browser, self.number):
+        #    print("Pelayo atack {} at {}".format(self.number,
+        #                                         str(datetime.now())))
+        if handlers.jazztel(self.browser, self.number):
+            print("jazztel atack {} at {}".format(self.number,
                                                  str(datetime.now())))
-
