@@ -29,6 +29,9 @@ class Lobw:
         #if handlers.vodafone(self.browser, self.number):
         #    print("Vodafone atack {} at {}".format(self.number,
         #                                               str(datetime.now())))
-        if handlers.circulo(self.driver, self.number):
-            print("Circulo atack {} at {}".format(self.number,
-                                                  str(datetime.now())))
+        #if handlers.circulo(self.driver, self.number):
+        #    print("Circulo atack {} at {}".format(self.number,
+        #                                          str(datetime.now())))
+        if handlers.generali(self.driver, self.number):
+            print("Generali atack {} at {}".format(self.number,
+                                                   str(datetime.now())))

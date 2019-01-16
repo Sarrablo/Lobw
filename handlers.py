@@ -19,6 +19,20 @@ def circulo(driver, telef_num):
     time.sleep(4)
     driver.render("circulo3.png")
 
+def generali(driver, telef_num):
+    driver.visit("https://www.generali.es/contacto-generali/te-llamamos")
+    time.sleep(1)
+    name = driver.at_xpath('.//*[@id="formNavigation:login-form-name"]')
+    name.set("Strago")
+    phone = driver.at_xpath('.//*[@id="formNavigation:login-form-phone"]')
+    phone.set(telef_num)
+    driver.at_xpath('.//*[@id="formNavigation:ley"]').click()
+    driver.at_xpath('.//*[@id="formNavigation:comunicacionesComerciales"]').click()
+    time.sleep(0.5)
+    driver.at_xpath('.//*[@id="formNavigation:j_idt92"]').click()
+    time.sleep(3)
+    driver.render("generali1.png")
+
 def pelayo(browser, telef_number):
     """Pelayo handler"""
     browser.get('http://ssl.webphone.es/pelayo/webphone.htm?w=63&p=&c=true&u=')
