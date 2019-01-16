@@ -18,6 +18,13 @@ class Lobw:
         #if handlers.pelayo(self.browser, self.number):
         #    print("Pelayo atack {} at {}".format(self.number,
         #                                         str(datetime.now())))
-        if handlers.jazztel(self.browser, self.number):
-            print("jazztel atack {} at {}".format(self.number,
-                                                 str(datetime.now())))
+        #if handlers.jazztel(self.browser, self.number):
+        #    print("jazztel atack {} at {}".format(self.number,
+        #                                         str(datetime.now())))
+        #if handlers.linea_directa(self.browser, self.number):
+        #    print("Linea Directa atack {} at {}".format(self.number,
+        #                                          str(datetime.now())))
+        if handlers.vodafone(self.browser, self.number):
+            print("Vodafone atack {} at {}".format(self.number,
+                                                        str(datetime.now())))
+
