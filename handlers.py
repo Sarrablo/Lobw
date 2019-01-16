@@ -1,6 +1,24 @@
 import time
 from selenium import webdriver
 
+
+
+def circulo(driver, telef_num):
+    driver.visit("http://www.circulodevidentes.com/te-llamamos/")
+    driver.render("circulo0.png")
+    driver.at_xpath('.//*[@data-id="rootBtn"]').click()
+    time.sleep(1)
+    number = driver.at_xpath('.//input[@name="customerPhone"]')
+    number.set(telef_num)
+    time.sleep(1)
+    driver.at_xpath('.//*[@data-id="callBtn"]').click()
+    time.sleep(2)
+    driver.render("circulo1.png")
+    time.sleep(3)
+    driver.render("circulo2.png")
+    time.sleep(4)
+    driver.render("circulo3.png")
+
 def pelayo(browser, telef_number):
     """Pelayo handler"""
     browser.get('http://ssl.webphone.es/pelayo/webphone.htm?w=63&p=&c=true&u=')
@@ -50,4 +68,5 @@ def cofidis(browser, telef_number):
     elem.send_keys(telef_number)
     browser.find_element_by_id('mainBlock.politique:DataEntry').click()
     browser.find_element_by_id('mainBlock.evt-wcbIntegradoEI:link').click()
+
 
